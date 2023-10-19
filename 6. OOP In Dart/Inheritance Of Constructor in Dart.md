@@ -738,9 +738,16 @@ __คำอธิบายโค้ด__
 - ใช้ decorator @classmethod เพื่อประกาศเมธอดชื่อเดียวกับคลาส เพื่อทำให้เป็นเมธอดที่สามารถเรียกใช้ได้จากคลาสและไม่จำเป็นต้องสร้างอ็อบเจ็กต์ก่อน
 - ใน Python ใช้ super().named() เพื่อเรียก constructor ของคลาสแม่และสร้างอ็อบเจ็กต์
 </details>
-      
-# Reference
-https://dart-tutorial.com/object-oriented-programming/inheritance-of-constructor-in-dart<br>
-https://www.w3schools.com/c/c_structs.php<br>
-https://www.geeksforgeeks.org/inheritance-in-python<br>
-https://www.javatpoint.com/order-of-execution-of-constructors-in-java-inheritance<br>
+
+## Silde นำเสนอ
+- [Inheritance Of Constructor.pdf](https://drive.google.com/file/d/1veqfkulIit1M0HviQd9ufydO05yx8DYP/view?usp=sharing)
+- [Inheritance Of Constructor.pptx](https://docs.google.com/presentation/d/1y8xHc8P-gVhJJkAmNzXFunSN065MxiJo/edit?usp=sharing&ouid=116662538381881581640&rtpof=true&sd=true)
+
+## Link Video
+- [คลิกเพื่อดูวิดีโอ](https://youtu.be/z-5hnCX3f9I?feature=shared)
+
+## Reference
+- https://dart-tutorial.com/object-oriented-programming/inheritance-of-constructor-in-dart<br>
+- https://www.w3schools.com/c/c_structs.php<br>
+- https://www.geeksforgeeks.org/inheritance-in-python<br>
+- https://www.javatpoint.com/order-of-execution-of-constructors-in-java-inheritance<br>

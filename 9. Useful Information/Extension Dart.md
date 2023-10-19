@@ -138,7 +138,7 @@ extension StringPadding on String {
 > นำเข้าใช้งาน string_lib1.dart และ string_lib2.dart และใช้งาน extension methods จากทั้งสองไลบรารี
 ```dart
 import 'string_lib1.dart';
-import 'string_lib2.dart' hide StringCase;
+import 'string_lib2.dart';
 
 void main() {
   print('hello'.capitalize());
@@ -275,6 +275,14 @@ print(extension.capitalize())  # แสดงผล "Hello"
 [Dart Extension | Inception Hideout](https://blog.intception.me/dev/flutter/dart-extension.html#%E0%B9%80%E0%B8%9A%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B9%89%E0%B8%99)<br>
 [Dart: Extension Methods](https://www.petepittawat.dev/posts/dart-extension-methods)<br>
 [Extension Methods | Dart](https://dart.dev/language/extension-methods)
+
+## Presentation
+
+- [Extension in Dart.mp4](https://youtu.be/FEfZlpPtuPo?si=cDvAbPuD1Vavfx10)<br>
+
+## Slide
+
+- [Extension in Dart.pdf](https://drive.google.com/file/d/1OIJG0ARjdH6jcnzdbtJdqY80-d-YSalT/view?usp=sharing)
 
   
   

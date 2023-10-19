@@ -159,3 +159,13 @@ https://www.theserverside.com/definition/Pascal-case<br>
 https://www.tutorialspoint.com/dart_programming/dart_programming_classes.htm<br>
 https://dart-tutorial.com/object-oriented-programming/class-in-dart/<br>
 
+
+ 
+# Slides & Clip
+https://youtu.be/JJe66ftuMK4<br>
+
+[Slide.pdf](https://github.com/630710676/pl/blob/main/Class%20in%20Dart.pdf?raw=true)<br>
+[Slide.pptx](https://github.com/630710676/pl/blob/main/Class%20in%20Dart.pptx?raw=true)<br>
+[Slide_2.pdf](https://github.com/630710676/pl/blob/main/Class%20in%20Dart_.pdf?raw=true)<br>
+[Slide_2.pdf](https://github.com/630710676/pl/blob/main/Class%20in%20Dart_.pdf)<br>
+[Slide_2.pptx](https://github.com/630710676/pl/blob/main/Class%20in%20Dart_.pptx)<br>

@@ -87,32 +87,31 @@ Tim Burton</code>
 
 #### • Java
 ```Java
-public class ArrayNameJava{
-    public static void main(String[] args){
-        String[] names = {"Christopher Nolan","Denis Villeneuve",
-                          "Francis Ford Coppola","James Cameron","Martin Scorsese",
-                          "Quentin Tarantino","Ridley Scott","Stanley Kubrick",
-                          "Steven Spielberg","Tim Burton"};
+import java.util.ArrayList;
+import java.util.List;
 
-        for(int i=0;i<10;i++){
-            System.out.println(names[i]);
-        }
+public class ListNamesJava{
+    public static void main(String[] args){
+        List<String> names = new ArrayList<String>();
+        names.add("Christopher Nolan");
+        names.add("Denis Villeneuve");
+        names.add("Francis Ford Coppola");
+        names.add("James Cameron");
+        names.add("Martin Scorsese");
+        names.add("Quentin Tarantino");
+        names.add("Ridley Scott");
+        names.add("Stanley Kubrick");
+        names.add("Steven Spielberg");
+        names.add("Tim Burton");
+
+        System.out.println(names);
     }
 }
 ```
 <details>
 <summary><strong>Output</strong></summary>
 <pre>
-<code>Christopher Nolan
-Denis Villeneuve    
-Francis Ford Coppola
-James Cameron       
-Martin Scorsese     
-Quentin Tarantino   
-Ridley Scott        
-Stanley Kubrick     
-Steven Spielberg    
-Tim Burton</code>
+<code>[Christopher Nolan, Denis Villeneuve, Francis Ford Coppola, James Cameron, Martin Scorsese, Quentin Tarantino, Ridley Scott, Stanley Kubrick, Steven Spielberg, Tim Burton]</code>
 </pre>
 </details>
 
@@ -225,7 +224,7 @@ void main()
 
     print("Your rent expense : ${list_expense[0]}");
     print("Your wage expense : ${list_expense[1]}");
-    print("Your maintenance expense : ${list_expense[0]}");
+    print("Your maintenance expense : ${list_expense[2]}");
     int sum = list_expense.reduce((a, b) => a + b);
     print("Total expense : $sum");
 }
@@ -241,7 +240,7 @@ Enter maintenance expense :
 3650
 Your rent expense : 4500
 Your wage expense : 15000
-Your maintenance expense : 4500
+Your maintenance expense : 3650
 Total expense : 23150</code>
 </pre>
 </details>
@@ -289,13 +288,14 @@ Total expense : 31720</code>
 
 #### • Java
 ```Java
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ListExpenseJava {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        ArrayList<Integer> list_expense = new ArrayList<Integer>();
+        List<Integer> list_expense = new ArrayList<Integer>();
         System.out.println("Enter rent expense : ");
         int n1 = scan.nextInt();
         list_expense.add(n1); 
@@ -434,11 +434,12 @@ Saturday</code>
 
 #### • Java
 ```Java
+import java.util.List;
 import java.util.ArrayList;
 
 public class ListDaysJava {
     public static void main(String[] args) {
-        ArrayList<String> days = new ArrayList<String>();
+        List<String> days = new ArrayList<String>();
         
         days.add("Sunday"); 
         days.add("Monday"); 
@@ -537,11 +538,12 @@ Adam Lev</code>
 
 #### • Java
 ```Java
+import java.util.List;
 import java.util.ArrayList;
 
 public class ListWhereJava {
     public static void main(String[] args) {
-        ArrayList<String> friend_names = new ArrayList<String>();
+        List<String> friend_names = new ArrayList<String>();
         friend_names.add("Taksin Shin");
         friend_names.add("Abhisit Vej");
         friend_names.add("Adam Lev");
@@ -549,7 +551,7 @@ public class ListWhereJava {
         friend_names.add("Donald Trump");
         friend_names.add("Joe Biden");
         friend_names.add("Vladimir Putin");
-        ArrayList<String> names = new ArrayList<String>();
+        List<String> names = new ArrayList<String>();
         for(int i=0;i<friend_names.size();i++){
             char first_letter = friend_names.get(i).charAt(0);
             if(first_letter=='A'){
@@ -1033,6 +1035,7 @@ Press other number to exit
 
 #### • Java
 ```Java
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -1041,7 +1044,7 @@ public class SimpleToDoListJava {
         System.out.println("Welcome to To-Do List");
         System.out.println("Choose you want to do..");
 
-        ArrayList<String> toDoListTask = new ArrayList<String>();
+        List<String> toDoListTask = new ArrayList<String>();
         Scanner scan = new Scanner(System.in);
 
         while(true){
@@ -1203,5 +1206,11 @@ Press other number to exit</code>
 >https://www.scaler.com/topics/string-length-in-c/
 >https://stackoverflow.com/questions/29568297/c-how-to-store-multiple-strings-in-an-array/
 >http://zerocontroller.blogspot.com/2017/05/c.html
+
+## VDO
+>https://www.youtube.com/watch?v=SeFhrsoDRbM
+
+## Slide
+[Programming-LanguagePresentation-Practice-4-Collections-In-Dart.pptx](https://github.com/soonklang/dart-tutorial/files/12883324/Programming-LanguagePresentation-Practice-4-Collections-In-Dart.pptx)
 
 ## นายธนวัต ศิลป์สะอาด 630710654

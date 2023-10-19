@@ -1,4 +1,4 @@
-# Anonymous Function in Dart
+# Arrow Functions in Dart
 ใน tutorial นี้ คุณจะได้เรียนรู้วิธีการเขียน Function ใน ภาษา Dart ให้สั้นลงโดยใช้ arrow functions
 ## Arrow functions หรือฟังก์ชันลูกศร
 Arrow Function เป็นการเขียนฟังก์ชันแบบย่อ ใช้สำหรับการเขียนฟังก์ชันที่มีเพียงนิพจน์เดียวให้สั้นลง โดย arrow function มีหน้าตาเป็นแบบนี้ => โดยฝั่งขวาของลูกศร จะเป็นค่าที่เราต้องการ return
@@ -91,3 +91,10 @@ https://www.w3schools.com/python/python_lambda.asp
 https://javascript.info/arrow-functions-basics
 
 https://www.geeksforgeeks.org/javascript-ternary-operator/
+### *< Video >*
+https://youtu.be/UVtbrH8uqWE
+### *< slide >*
+https://docs.google.com/presentation/d/1jwt_gHkHa3OM4U3nYTxmdfcB9v8OviBx/edit#slide=id.p1
+
+[arrow functions.pdf](https://github.com/soonklang/dart-tutorial/files/12888915/arrow.functions.pptx.pdf)
+

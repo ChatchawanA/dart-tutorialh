@@ -68,8 +68,14 @@ void main(){
 ถือว่าเป็นการ promoting general types เป็น specific subtypes
 
 ```
+## Presentation Slide
+[Type_Promotion.pdf](https://github.com/soonklang/dart-tutorial/files/12775141/Type_Promotion.pdf)
+
+## Link Video
+[Type-Promotion Video](https://www.youtube.com/watch?v=AR9E8RRx5i8)
 
 ## ข้อมูลอ้างอิง
 [dart-tutorial](https://dart-tutorial.com/null-safety/type-promotion-in-dart/) 
 
 [dart-dev](https://dart.dev/effective-dart/usage#consider-assigning-a-nullable-field-to-a-local-variable-to-enable-type-promotion)
+

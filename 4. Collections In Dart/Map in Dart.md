@@ -709,11 +709,15 @@ assert(teamAssignments['Catcher'] != null);
 > - **Java** มีความหลากหลายของคลาส `Map` เพื่อตอบสนองกับความต้องการในการจัดเก็บและจัดการข้อมูล.
 > - **C** ขาดการรองรับ Map ในตัว ส่งผลให้มีการจัดการอาเรย์แบบ manual และมีแนวโน้มที่จะเกิดข้อผิดพลาดมากขึ้น
 
-**อ้างอิง**
+## อ้างอิง
 - https://dart-tutorial.com/collections/map-in-dart/
 - https://dart.dev/guides/libraries/library-tour#transforming-collections
 - https://www.geeksforgeeks.org/dart-collections/
 - https://www.tutorialspoint.com/dart_programming/dart_programming_collection.htm
 
+## Link Video
+https://www.youtube.com/watch?v=jPbbMs8yCWs
 
-
+## Slide
+- [Map in Dart.pdf](https://github.com/PraeJi/File/blob/main/Map%20in%20Dart.pdf?raw=true)
+- [Map in Dart v2.pdf](https://github.com/PraeJi/File/blob/main/Map%20in%20Dart%20v2.pdf?raw=true)

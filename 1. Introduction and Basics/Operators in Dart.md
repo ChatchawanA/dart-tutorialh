@@ -439,7 +439,6 @@ int main()
 ```
 ## ในตัวอย่าง เป็นโปรแกรมในการใช้งานตัวดำเนินการระดับบิตกับการจัดการข้อมูลประเภท Integer เราได้ประกาศตัวแปร a และ b และได้คอมเมนต์ค่าของ Binary ที่ถูกเก็บไว้ในหน่วยความจำ การทำงานของตัวดำเนินการ & และ | นั้นทำงานกับคู่ของแต่ละบิตของตัวแปรทั้งสอง ส่วนอีกสามตัวดำเนินการที่เหลือนั้นกระทำกับตัวแปรเดียว ในตัวดำเนินการ ~ นั้นเป็นการกลับบิต และสำหรับตัวดำเนินการ Bit shift นั้นเมื่อเลื่อนบิตไปทางซ้ายจะทำให้ค่าเพิ่มขึ้นสองเท่า และเมื่อเลื่อนบิตไปทางขวาก็จะทำให้ค่าลดลงสองเท่า
 
-a & b = 0
 ## คำตอบที่ได้
 ```dart
 a & b = 0
@@ -522,3 +521,10 @@ public class BitwiseOperators {
 - https://toupawa.com/learn-dart-from-zero-to-standard/
 - https://blog.intception.me/dev/flutter/dart-part-2.html#equality-and-relational-operators
 - http://marcuscode.com/lang/python/operators
+# File การนำเสนอ
+[Operators in Dart.pdf](https://github.com/soonklang/dart-tutorial/files/12881234/Operators.in.Dart.pdf)
+[Operators in Dart (3).pdf](https://github.com/soonklang/dart-tutorial/files/12882763/Operators.in.Dart.3.pdf)
+
+# Video นำเสนอ
+https://youtu.be/YUftb_KjFKE
+

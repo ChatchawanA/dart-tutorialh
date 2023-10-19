@@ -514,3 +514,15 @@ if __name__ == "__main__":
 - https://www.javatpoint.com/dart-switch-case-statement
 - https://flutterrdart.com/dart-switch-case-statement-with-examples/
 - https://flutterbyexample.com/lesson/switch-statements-and-case
+
+## **Link Video**
+https://youtu.be/OU0TFuwThdc
+
+
+## **Slides**
+[Switch Case in Dart.pdf](https://github.com/soonklang/dart-tutorial/files/12880759/Switch.Case.in.Dart.pdf)
+<br>[Switch Case in Dart.pptx](https://github.com/soonklang/dart-tutorial/files/12880765/Switch.Case.in.Dart.pptx) (V.1)
+<br>[Switch Case in Dart.pptx](https://github.com/soonklang/dart-tutorial/files/12882181/Switch.Case.in.Dart.pptx) (V.2)
+
+
+

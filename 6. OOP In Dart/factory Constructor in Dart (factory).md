@@ -213,3 +213,11 @@ https://iq.opengenus.org/factory-pattern-in-python/
 https://dart-tutorial.com/object-oriented-programming/factory-constructor-in-dart/
 
 https://stackoverflow.com/questions/545419/using-base-class-constructor-as-factory-in-python
+# Video
+[Video](https://www.youtube.com/watch?v=c5fTgTG_XF0)
+# สไลด์
+[Factory Constructor in Dart (factory).pptx](https://github.com/soonklang/dart-tutorial/files/12883011/Factory.Constructor.in.Dart.factory.pptx)
+
+[Factory Constructor in Dart (factory).pdf](https://github.com/soonklang/dart-tutorial/files/12883112/Factory.Constructor.in.Dart.factory.pdf)
+
+https://drive.google.com/file/d/1jXnXznePUg9L8cQyqbW2AjSOrc_0LAsx/view?usp=drive_link

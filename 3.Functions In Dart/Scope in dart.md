@@ -118,6 +118,9 @@ def g(foo):
     x = 99
     foo()
     print(x)
+
+x = 1
+g(f)
 ```
 
 ### Output :
@@ -133,3 +136,8 @@ def g(foo):
 *   https://dart-tutorial.com/dart-functions/scope-in-dart/
 *   https://www.tutorialspoint.com/lexical-scoping-in-dart-programming?
 *   https://stackoverflow.com/questions/51604346/
+
+## **Link Video** ##
+https://youtu.be/SiUSeKjG1HU
+
+pdf file : [SCOPE IN DART.pdf](https://github.com/soonklang/dart-tutorial/files/12774190/Scope.pdf)

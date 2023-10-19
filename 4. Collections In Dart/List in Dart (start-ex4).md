@@ -83,7 +83,7 @@
 
 ### Fixed Length List
 
-  การสร้าง List โดยกำหนดขอบเขตความยาวของพื้นที่จัดเก็บไว้ก่อน จะไม่สามารเปลี่ยนแปลงหรือเพิ่มความยาวของพื้นที่จัดเก็บได้อีกในภายหลัง
+  การสร้าง List โดยกำหนดขอบเขตความยาวของพื้นที่จัดเก็บไว้ก่อน จะไม่สามารถเปลี่ยนแปลงหรือเพิ่มความยาวของพื้นที่จัดเก็บได้อีกในภายหลัง
 
   > Ex
 
@@ -121,7 +121,7 @@
 ```
 ### Growable List
 
-การสร้าง List โดยที่ไม่ได้มีการกำหนดขอบเขตความยาวของพื้นที่จัดเก็บไว้ก่อน ทำให้สามารเปลี่ยนแปลงหรือเพิ่มความยาวของพื้นที่จัดเก็บได้ และเป็นที่นิยมมากกว่า Fixed Length List
+การสร้าง List โดยที่ไม่ได้มีการกำหนดขอบเขตความยาวของพื้นที่จัดเก็บไว้ก่อน ทำให้สามารถเปลี่ยนแปลงหรือเพิ่มความยาวของพื้นที่จัดเก็บได้ และเป็นที่นิยมมากกว่า Fixed Length List
 
 > Ex
 ```bash
@@ -507,3 +507,13 @@
 *<https://www.geeksforgeeks.org/python-lists/>*
 
 *<https://www.programiz.com/python-programming/list#google_vignette>*
+
+# Presentation
+Link video : https://www.youtube.com/watch?v=MrJ3x-j5f6w&feature=youtu.be
+
+PDF : [List in Dart (start-ex4) presentation.pdf](https://github.com/EarthXSY/File-dowload/blob/main/List%20in%20Dart%20(start-ex4)%20presentation.pdf)
+Version 2 :[List in Dart (start-ex4).pdf](https://github.com/EarthXSY/File-dowload/blob/9dc9da40e27d347b0fc15a1c5dcbbf457473c56c/List%20in%20Dart%20(start-ex4).pdf)
+
+Dowload PPT : [List in dart](https://github.com/EarthXSY/File-dowload/raw/main/List%20in%20Dart%20(start-ex4).pptx)
+Version 2 : [List in dart V.2](https://github.com/EarthXSY/File-dowload/raw/main/List%20in%20Dart%20(start-ex4).pptx)
+

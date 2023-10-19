@@ -228,3 +228,11 @@ console.log(`Square area: ${square.area()}`);
 [Minin in ruby](https://www.tutorialspoint.com/ruby/ruby_modules.htm)
 <br>
 [Example](https://en.wikipedia.org/wiki/Mixin)
+<br>
+# Video
+[Video](https://www.youtube.com/watch?v=it0O8oQBliQ)
+# Presentation
+[Presentation (3).pdf](https://github.com/soonklang/dart-tutorial/files/12883031/Presentation.3.pdf)
+<br>
+[Presentation (5).pptx](https://github.com/soonklang/dart-tutorial/files/12889679/Presentation.5.pptx)
+

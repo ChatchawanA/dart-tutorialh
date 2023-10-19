@@ -125,6 +125,11 @@ int main()
   ## single-line comment 
    * C
 ```
+#include <studio.h>
+
+Int main()
+
+{
 // print Hello world to the screen
 
 print(“Hello world”);
@@ -262,6 +267,13 @@ https://www.programiz.com/python-programming/comments<br>
 https://unstop.com/blog/comments-in-c
 
 
+## Link Video
+https://youtu.be/nBpeLYa4Xno?feature=shared
+
+## Slide
+[Comments in Dart.pdf](https://github.com/soonklang/dart-tutorial/files/12884850/Comments.in.Dart.pdf)
+
+[Comments in Dart.pptx](https://github.com/soonklang/dart-tutorial/files/12884874/Comments.in.Dart.pptx)
 
   
 

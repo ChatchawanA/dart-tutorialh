@@ -605,3 +605,15 @@ Mark
 - https://dart.dev/codelabs/null-safety
 - https://dart-tutorial.com/null-safety/null-safety-exercise-in-dart/
 - https://benzneststudios.com/blog/dart/hello-sound-null-safety-in-dart/
+
+
+## Slide
+- [Null Safety Exercise (Dart).pptx](https://github.com/soonklang/dart-tutorial/files/12752742/Null.Safety.Exercise.Dart.pptx)
+- [Null Safety Exercise (Dart) new version.pptx](https://github.com/soonklang/dart-tutorial/files/12877299/Null.Safety.Exercise.Dart.new.version.pptx)
+- [Null Safety Exercise (Dart) new version.pdf](https://github.com/soonklang/dart-tutorial/files/12877248/Null.Safety.Exercise.Dart.new.version.pdf)
+
+
+
+
+## Link Vdo
+[Null Safety Exercise Vdo](https://youtu.be/103jXEsbooo)

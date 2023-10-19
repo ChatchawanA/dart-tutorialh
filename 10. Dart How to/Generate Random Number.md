@@ -80,9 +80,9 @@ import 'dart:math';
 
 void main() {
    Random r1 = new Random();     //ตัวเลขจำนวนเต็มที่บวกเข้าไปข้างหลังmethod จะเป็นตัวกำหนดค่าเริ่มต้น
-   print(r1.nextInt(11)+1);      // สุ่มตัวเลขตั้งแต่ 1-10
-   print(r1.nextInt(101)+1);    // สุ่มตัวเลขตั้งแต่ 1-100
-   print(r1.nextInt(101)+50); // สุ่มตัวเลขตั้งแต่ 50-100
+   print(r1.nextInt(10)+1);      // สุ่มตัวเลขตั้งแต่ 1-10
+   print(r1.nextInt(100)+1);    // สุ่มตัวเลขตั้งแต่ 1-100
+   print(r1.nextInt(100)+50); // สุ่มตัวเลขตั้งแต่ 50-100
 }
 ```
 <details>
@@ -210,6 +210,13 @@ print(random.randint(0,99))
 > 
 > ❗❗ แต่ในภาษา C จะต้องนำตัวเลขมา % ข้างหลังเพื่อกำหนดค่าสิ้นสุดที่สามารถสุ่มได้ ❗❗
 
+## Link Slide : 
+- [Generate Random Number Silde(google_drive)](https://docs.google.com/presentation/d/1aEdE28PKA6iLmqUr6I7x7cfrGzo6Ma_C/edit?usp=sharing&ouid=113718269283843830663&rtpof=true&sd=true)
+- [Generate_Random_Number_640710974.pdf(google_drive)](https://drive.google.com/file/d/1sh1qwjz8mH_wQnZ-9X3jufvEtjjhb63R/view?usp=sharing)
+- [Generate_Random_Number_640710974.pdf](https://github.com/soonklang/dart-tutorial/files/12884723/Generate_Random_Number_640710974.pdf)
+- [Generate_Random_Number_640710974.pptx](https://github.com/soonklang/dart-tutorial/files/12889115/Generate_Random_Number_640710974.pptx)
+
+Link Video : [Generate Random Number Video](https://youtu.be/F55rFfzL85Y)
 
 ## Reference
 [Random class - dart:math library - Dart API](https://api.dart.dev/stable/3.1.0/dart-math/Random-class.html)

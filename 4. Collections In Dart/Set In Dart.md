@@ -161,7 +161,7 @@ Output
     Last Value is Banana
     Is fruits empty? false
     Is fruits not empty? true
-    The length of fruits is 4
+    The length of fruits is 3
     true
 ```
 Finding --> ค้นหาค่าใน Set
@@ -176,7 +176,7 @@ Finding --> ค้นหาค่าใน Set
 ```
 Output
 ```dart
-    The value of check is: true
+    The value of check is: false
 ```
 ## แสดงค่าใน Set
 แสดงค่าใน Set ด้วยการใช้ loop
@@ -345,3 +345,10 @@ https://dart-tutorial.com/collections/set-in-dart/
 https://www.darttutorial.org/dart-tutorial/dart-set/  
 http://marcuscode.com/lang/java/hashset  
 http://marcuscode.com/lang/python/set
+
+
+## Link VDO
+https://youtu.be/f_2FvIE9828
+## power point
+[set in Dart slide](https://github.com/korapan/Set_in_Dart/raw/main/Set%20in%20Dart.pptx)
+

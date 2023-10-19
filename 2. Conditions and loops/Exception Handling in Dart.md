@@ -1,6 +1,6 @@
 # Exception Handling in Dart
    ## Exception Handler คือ
-   เป็นสิ่งที่ช่วยดักจับข้อผิดผลาดในโปรแกรม โดยนำไปใส่ครอบโค๊ดที่มีโอกาสจะเกิดError เมื่อเกิด Error ขึ้นจะสามรถเขียนโค๊ดที่จะแก้ไขต่อไป
+   เป็นสิ่งที่ช่วยดักจับข้อผิดผลาดในโปรแกรม โดยนำไปใส่ครอบโค๊ดที่มีโอกาสจะเกิดError เมื่อเกิด Error ขึ้นจะสามารถเขียนโค๊ดที่จะแก้ไขต่อไป
   ### Dart มีวิธีที่จะจัดการ Error เหล่านั้นดังนี้
   * Catch/On
   * Finlly
@@ -17,7 +17,7 @@ on Exception1 {
     // ระบุประเภท Exception
               }
 Catch Exception2  {
-     // โค๊ดที่ใช้จะการ Exception
+     // โค๊ดที่ใช้จัดการ Exception
   }
    ```
 * เราสามารถจัดการ Exceptionหลายอันได้โดยใช้Catchมากกว่าหนึ่ง Block
@@ -75,7 +75,7 @@ catch Exception2 {
    //  โค๊ดจัดการ Exception
 }    
 finally {   
-   // โคีดที่จะรันเสมอไม่ว่าจะมี Exception หรือไม่  
+   // โค๊ดที่จะรันเสมอไม่ว่าจะมี Exception หรือไม่  
 }  
 ```
 ## ตัวอย่างการใช้งาน Final Block
@@ -139,6 +139,8 @@ Weight cannot be negative
 * https://dart.dev/language/error-handling#exceptions
 * https://www.tutorialspoint.com/dart_programming/dart_programming_exceptions.htm
 
+## Slides & Clips
+Vdo link : https://youtu.be/s0UPdajVGjE
 
-
-
+Slide Files : [Exception Handling In Dart.pptx](https://github.com/soonklang/dart-tutorial/files/12774188/Exception.Handling.In.Dart.pptx)
+PDF: [Exception Handling In Dart.pdf](https://github.com/soonklang/dart-tutorial/files/12887830/Exception.Handling.In.Dart.pdf)

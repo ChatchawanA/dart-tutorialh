@@ -30,7 +30,7 @@ bool isNoble(int atomicNumber) => _nobleGases[atomicNumber] != null;
 => expr คือการเขียนย่อของ { return expr; } 
 
 ## Anonymous functions
-ใน Dart เราจะสามารถสร้าง Anonymous functions หรือบางครั้งถูกเรียกว่า lambda functions หรือ closure functions โดยเราจะมีตัวอย่างเป็น โค้ดที่มี item เป็นตัว parameter ส่งไปเปลี่ยนเป็นตัวอักษรใหญ่ จากในส่งให้ Anonymous function แสดงคำๆนั้นออกมาพร้อมกับความของข้อความ
+ใน Dart เราจะสามารถสร้าง Anonymous functions หรือบางครั้งถูกเรียกว่า lambda functions หรือ closure functions โดยเราจะมีตัวอย่างเป็น โค้ดที่มี item เป็นตัว parameter ส่งไปเปลี่ยนเป็นตัวอักษรใหญ่ จากในส่งให้ Anonymous function แสดงคำๆนั้นออกมาพร้อมกับความยาวของข้อความ
 ```dart
 const list = ['apples', 'bananas', 'oranges'];
 list.map((item) {
@@ -212,5 +212,9 @@ https://www.w3schools.com/c/index.php
 https://dart.dev/language/functions
 
 https://www.techtarget.com/whatis/definition/lowerCamelCase
+### *< Link Video >*
+https://youtu.be/9-FAwjsoHUw?si=rFaw5hTHAWpHs-62
+### *< Slide File >*
+pdf:[Function in dart.pdf](https://github.com/sawankaloke/Slideadnpdf/blob/main/FUNCTIONS%20IN%20DART.pdf)
 
-
+slide:[Function in dart.pptx](https://github.com/sawankaloke/Slideadnpdf/blob/14d0f9551b4139f95484945801f99fe4a1627a6d/FUNCTIONS%20IN%20DART.pptx)

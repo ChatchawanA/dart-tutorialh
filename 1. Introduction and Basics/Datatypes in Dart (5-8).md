@@ -1,5 +1,7 @@
 Datatypes in Dart (5-8)
 
+
+
  # DATA TYPES IN DART
  
 Data types ช่วยให้จัดหมวดหมู่ข้อมูลประเภทต่างๆ ทั้งหมดที่ใช้ในโค้ดของคุณ เช่น ตัวเลข ข้อความ สัญลักษณ์ ฯลฯ ประเภทข้อมูลจะระบุประเภทของค่าที่ตัวแปรจะจัดเก็บ ตัวแปรแต่ละตัวมีประเภทข้อมูลของตัวเอง
@@ -175,8 +177,14 @@ Dart ได้แบ่ง type เป็น nullable และ non-nullable แ
 
 ![image](https://github.com/soonklang/dart-tutorial/assets/120002243/45aedfd6-0b27-4b71-a997-de5c60255566)
 
+ลิงค์ Video
+https://youtu.be/O985hzMjih0
 
-
+Slide 
+version 1
+[PL287.pdf](https://github.com/soonklang/dart-tutorial/files/12773805/PL287.pdf)
+version 2
+[PL287 version2.pdf](https://github.com/soonklang/dart-tutorial/files/12878016/PL287.version2.pdf)
 
 
 

@@ -141,7 +141,7 @@ void main() {
  str(10).forEach(print);
 }
 ```
->จากตัวอย่าง จะเห็นได้ว่ามีการพิมพ์ค่า 0-10 โดยแต่ละค่าจะพิมพ์ค่าหลังจากผ่านไป 1 วินาที
+>จากตัวอย่าง จะเห็นได้ว่ามีการพิมพ์ค่า 1-10 โดยแต่ละค่าจะพิมพ์ค่าหลังจากผ่านไป 1 วินาที
 
 <details>
 <summary><strong>Output</strong></summary>
@@ -150,6 +150,11 @@ void main() {
 3
 4
 5
+6
+7
+8
+9
+10
 </code></pre>
 </details>
 
@@ -157,7 +162,7 @@ void main() {
 |async                             |async*                                             |
 |----------------------------------|---------------------------------------------------|
 |ใช้กับ  Future                      |ใช้กับ  Stream                                       |
-|async อาจใช้เวลาในการทำงานที่อาจยาวนาน|async* พิมพ์ค่าที่เป็น Future values หลายๆครั้งพร้อมกัน    |
+|async พิมพ์ค่าที่เป็น Future values ได้ค่าเดียว|async* พิมพ์ค่าที่เป็น Future values หลายๆครั้งได้   |
 |ส่งผลลัพธ์กลับมาในรูปแบบของ Future    |ส่งผลลัพธ์กลับมาในรูปแบบของ Stream                     |
 
 ## yield vs yield*
@@ -229,3 +234,7 @@ End Task 1
 :https://dev.java/learn/api/streams/<br>
 :https://docs.python.org/3/library/asyncio-stream.html#streamwriter<br>
 :https://dart-tutorial.com/asynchronous-programming/stream-in-dart/
+___
+# Slides and Clip
+Slides : https://github.com/soonklang/dart-tutorial/files/12884394/StreaminDart.Ex.Async.pdf<br>
+Clip : https://youtu.be/kMgyhTy7xOM](https://www.youtube.com/watch?v=dO88yiwcJcU)https://www.youtube.com/watch?v=dO88yiwcJcU

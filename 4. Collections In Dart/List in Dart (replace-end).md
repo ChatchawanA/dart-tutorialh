@@ -1,6 +1,6 @@
 # List in Dart (replace-end)
 ## การแทนที่ช่วงใน List
-เราสามารถแทนที่ค่าในลิสในช่วงที่เราเลือกโดยใช้เม็ดตอด replaceRange() โดยเมดตอทจะทำการลบข้อมูลที่อยู่ในช่วงตำแหน่งเริ่มจนถึงตำแหน่งสิ้นสุดที่ตามเรากำหนด
+เราสามารถแทนที่ค่าในลิสในช่วงที่เราเลือกโดยใช้เม็ดตอด replaceRange() โดยเมดตอทจะทำการลบข้อมูลที่อยู่ในช่วงตำแหน่งเริ่มจนถึงตำแหน่งสิ้นสุดลบด้วยหนึ่งที่ตามเรากำหนด
 >Ex
 ```
 void main() {
@@ -15,7 +15,7 @@ void main() {
 ก่อนใช้ replaceRange [5, 3, 1, 4, 5]
 หลังใช้ replaceRange [5, 8, 2, 5]
 ```
-ในตัวอย่าง เรากำหนดตำแหน่งเริ่มต้นคือตำแหน่งที่ 1 และตำแหน่งสิ้นสุดคือตำแหน่งที่ 4 และแทนที่ข้อมูลข้างในด้วยค่า 8,2 
+ในตัวอย่าง เรากำหนดตำแหน่งเริ่มต้นคือตำแหน่งที่ 1 และตำแหน่งสิ้นสุดคือตำแหน่งที่ 4-1 และแทนที่ข้อมูลข้างในด้วยค่า 8,2 
 ## การลบข้อมูลใน list
 การลบข้อมูลใน list มีอยู่สี่วิธี 
 | Method | Description |
@@ -131,7 +131,7 @@ void main() {
 หลังใช้ : [{name: John, age: 30}, {name: Bob, age: 50}, {name: Tom, age: 14}]
 ```
 #### ตัวอย่างที่4:removeRange()
-วิธีนี้จะใช้เม็ดตอด removeLast() เป็นการลบข้อมูลในตำแหน่งที่กำหนดเป็นช่วงจนถึงตำแหน่งสุดท้ายที่กำหนด ตำแหน่งที่จะถูกลบนั้นคือตำแหน่งแรกที่กำหนดและ ตำแหน่งสุดท้ายที่กำหนด -1ตำแหน่ง
+วิธีนี้จะใช้เม็ดตอด removeRange() เป็นการลบข้อมูลในตำแหน่งที่กำหนดเป็นช่วงจนถึงตำแหน่งสุดท้ายที่กำหนด ตำแหน่งที่จะถูกลบนั้นคือตำแหน่งแรกที่กำหนดและ ตำแหน่งสุดท้ายที่กำหนด -1ตำแหน่ง
 >Ex 1.
 ```
 void main() {
@@ -260,7 +260,7 @@ void main() {
 50
 ```
 #### Loops In List ใน Java และ Python
-ใน และ ก็สามารถใช้ loop ในการพิมพ์ค่าใน list ได้เช่นกัน
+ใน java และ python ก็สามารถใช้ loop ในการพิมพ์ค่าใน list ได้เช่นกัน
 >Ex Java
 ```
 import java.util.*;
@@ -454,7 +454,7 @@ void main() {
 ```
 จากในตัวอย่างหาก ```bool sad = true```output ที่ได้จะเท่ากับ ```[milk, ghee ,Beer]```
 ## ตำแหน่งใน list ของ Drat
-ในภาษา เราสามารถใช้ตำแหน่งในการเป็นฟิวเตอร์ ในการหาข้อมูลที่ต้องการได้ ในตัวอย่างต่อไปนี้เลขคู่เท่านั้นที่จะถูกกรอง
+ในภาษา Dart เราสามารถใช้ตำแหน่งในการเป็นฟิวเตอร์ ในการหาข้อมูลที่ต้องการได้ ในตัวอย่างต่อไปนี้เลขคู่เท่านั้นที่จะถูกกรอง
 >Ex
 ```
 void main(){
@@ -479,4 +479,5 @@ https://www.geeksforgeeks.org/iterate-through-list-in-java/
 https://www.geeksforgeeks.org/how-to-combine-lists-in-dart/
 https://www.geeksforgeeks.org/python-ways-to-concatenate-two-lists/
 https://www.digitalocean.com/community/tutorials/merge-two-lists-in-jav
-
+## Link VDO :[List in Dart (replace-end)](https://www.youtube.com/watch?v=2eN2VNHVvsc)
+## Link Slide : [List in Dart (replace-end)](https://github.com/SuwatchaChaikamhang/Slidepl/raw/main/List-in-Dart-replace-end%20(2).pptx)

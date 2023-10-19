@@ -814,4 +814,11 @@ https://www.programiz.com/python-programming/methods/string <br>
 https://www.programiz.com/java-programming/library/string <br>
 https://www.delftstack.com/tags/c-string/ <br>
 
+## Link Video
 
+https://youtu.be/iPKQW0uKcbw?feature=shared
+
+## Slide
+
+[String In Dart (trim-end).pptx](https://github.com/soonklang/dart-tutorial/files/12884859/String.In.Dart.trim-end.pptx)<br>
+[String In Dart (trim-end).pdf](https://github.com/soonklang/dart-tutorial/files/12884817/String.In.Dart.trim-end.pdf)

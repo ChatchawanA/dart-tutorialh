@@ -180,7 +180,7 @@ class C extends A {
   </pre>
   </details>
   
-  4.Multiple Inheritance -> classต่างๆ สืบทอดในรูปแบบลูกโซ่ subclassหนึ่งทำการสืบทอดคุณสมบัติต่อจาก subclassอื่น 
+  4.Multiple Inheritance -> subclass  ทำการสืบทอดคุณสมบัติจาก class super มากว่า 1  
   <details>
   <summary><strong>Syntax</strong></summary>
   <pre>
@@ -285,7 +285,10 @@ output
   Maine Coon meow everytime.
   This is the Animal class called Parent class
 ```
+## Slide & Clip
+[Slide Inheritance in dart](https://drive.google.com/file/d/1NHjKkStk0nrNAavgxp4eK9byH1hSmsh1/view?usp=drive_link)
 
+[Clip Inheritance in dart](https://drive.google.com/file/d/1--KlgR73pPHzkugaX9_tKHgzbB50wK3e/view?usp=drive_link)
 ## แหล่งอ้างอิง
 
 https://www.geeksforgeeks.org/dart-concept-of-inheritance/

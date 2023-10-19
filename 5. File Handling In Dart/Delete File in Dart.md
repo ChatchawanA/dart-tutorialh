@@ -273,6 +273,9 @@ int remove(const char *filename);
  https://www.learnc.net/c-tutorial/c-delete-file/<br>
  https://www.tutorialkart.com/c-programming/c-delete-file/#gsc.tab=0<br>
 
+## Slide & Video
+[Read File In Dart.pdf](https://github.com/PasinYst/silde/blob/main/Delete%20File%20in%20Dart.pdf)<br>
+https://youtu.be/M_HkHvEa3HE<br>
 
 
 

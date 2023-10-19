@@ -417,3 +417,10 @@ ___
 [Streams — Python 3.11.5 documentation](https://docs.python.org/3/library/asyncio-stream.html)
 <br>
 [DartLangSpecDraft.pdf](https://spec.dart.dev/DartLangSpecDraft.pdf)
+
+___
+## **Video**
+[Stream in dart](https://youtu.be/kMgyhTy7xOM)
+___
+## **Slide**
+[Stream In dart](https://github.com/soonklang/dart-tutorial/files/12884695/stream.pdf)

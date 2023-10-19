@@ -297,7 +297,7 @@ public class Main {
 
     // Constructor
     //มี constructor สำหรับclass Staff ที่รับพารามิเตอร์บางส่วน และกำหนดค่าเริ่มต้นให้กับคุณสมบัติต่าง ๆ ในclass
-    Staff(String name, String phone1, String subject) {
+    Staff(String name, int phone1, String subject) {
         this.name = name;
         this.phone1 = phone1;
         this.subject = subject;
@@ -306,21 +306,18 @@ public class Main {
     // Method to display information
     //method display() ใช้สำหรับแสดงค่าของคุณสมบัติใน class.
     void display() {
-        System.out.println("Name: " + this.name);
-        System.out.println("Phone 1: " + this.phone1);
-        System.out.println("Phone 2: " + this.phone2);
-        System.out.println("Subject: " + this.subject);
+         print("Name: ${this.name}");
+         print("Phone1: ${this.phone1}");
+         print("Phone2: ${this.phone2}");
+         print("Subject: ${this.subject}");
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
+      void main(){
         // Creating an object of the Staff class
-        //สร้าง Object 1 ตัวของ class Staff และเรียกใช้ method display() เพื่อแสดงข้อมูลของ Object.
-        Staff staff = new Staff("Alice", "1234567890", "Math");
+        Staff staff = new Staff("John", 1234567890 , "Maths");
         staff.display();
-    }
-}
+      }
 ```
 >output
 ```
@@ -335,12 +332,12 @@ Subject: Maths
 ```dart
 class Staff {
     String name;
-    String phone1;
-    String phone2;
+    int phone1;
+    int phone2;
     String subject;
 
     // Constructor
-    Staff(String name, String phone1, String subject) {
+    Staff(String name, int phone1, String subject) {
         this.name = name;
         this.phone1 = phone1;
         this.subject = subject;
@@ -358,7 +355,7 @@ class Staff {
 public class Main {
     public static void main(String[] args) {
         // Creating an object of the Staff class
-        Staff staff = new Staff("Alice", "1234567890", "Math");
+        Staff staff = new Staff("John", 1234567890 , "Maths");
         staff.display();
     }
 }
@@ -372,3 +369,18 @@ public class Main {
 - https://dart-tutorial.com
 - https://dart.dev
 - https://www.tutorialspoint.com
+
+## Link Video
+- https://drive.google.com/file/d/1PVGuoFsVUwQ-qNr7e58RGVs9f1fgOYrx/view?usp=sharing
+
+## Silde นำเสนอ
+- [Constructor in Dart Part 1'.pdf](https://github.com/soonklang/dart-tutorial/files/12816686/Constructor.in.Dart.Part.1.pdf)
+- [Constructor in Dart Part 1'.pptx](https://github.com/soonklang/dart-tutorial/files/12816687/Constructor.in.Dart.Part.1.pptx)
+
+
+
+
+
+
+
+

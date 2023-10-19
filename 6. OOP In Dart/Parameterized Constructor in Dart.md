@@ -71,7 +71,7 @@
         this.name = name;
         this.age = age;
         this.rollNumber = rollNumber;
-      }**strong text**
+      }
     }
     
     void main(){
@@ -119,7 +119,9 @@
 ### Example 3: Parameterized Constructor With Default Values In Dart
 ในตัวอย่างที่ 3 มี **class Student** ที่มี ตัวแปร 2 ตัว คือ **name** และ **age**
 ใน **class Student** มี **constructor** ตัวเดียวและมีการกำหนดค่าให้ตัว **parameters** เพื่อใช้กำหนดค่าให้ตัวแปรใน **class**
-จะสังเกตได้ว่าจะมีการใส่ **{ }** ครอบ **parameter** เหมือนตัวอย่างที่ 2 แต่จะมีการกำหนดค่าให้ **parameters**
+
+จะสังเกตได้ว่าเป็น Named Parameter เหมือนตัวอย่างที่ 2 แต่จะมีการกำหนดค่าให้ **parameters** ถ้าไม่ต้องการให้เป็น Named Parameter สามารถนำ { } ออก และใช้ [ ] ครอบ parameter ที่จะกำหนดค่าได้
+
 ใน **main()** จะมีการสร้าง **object** ของ **class Student** แต่จะไม่มีการส่งค่า
 ```dart
     class Student {
@@ -341,6 +343,11 @@
 	Second number = 20
 	Addition of two numbers = 30
 ```
+# Video
+- https://www.youtube.com/watch?v=AU5Yyw5erNI
+
+# Slied
+- [Parameterized Constructor in Dart.pdf](https://github.com/soonklang/dart-tutorial/blob/main/6.%20OOP%20In%20Dart/Parameterized%20Constructor%20in%20Dart.pdf)
 
 # Reference
 
@@ -351,3 +358,5 @@
  - https://www.geeksforgeeks.org/constructors-c/
  - https://www.geeksforgeeks.org/constructors-in-java/
  - https://www.geeksforgeeks.org/constructors-in-python/
+
+640710052 ธนาดล ชีวโรจน์ณรงค์

@@ -1,6 +1,6 @@
 
 # Interface in Dart
-Interface คือ การกำหนดโครงสร้างของ methood ขึ้นมาอาจไม่มีการกำหนดรายละเอียด การทำงานใดๆ โดยทุก method จะไม่อนุญาตให้เรียกใช้ทำงาน แต่จะถูกสืบทอดและกำหนดรายละเอียด ของ Interface นั้น คลาสที่ implement ก็จะมี methood ที่เรียกใช้งานได้ 
+Interface คือ การกำหนดโครงสร้างของ methood ขึ้นมาอาจไม่มีการกำหนดรายละเอียด การทำงานใดๆ  แต่อาจจะถูกสืบทอดและกำหนดรายละเอียด ของ Interface นั้น คลาสที่ implement ก็จะมี methood ที่เรียกใช้งานได้ 
 -----------------------------------------------------------------------------
 # Syntax ของ Dart
 ```dart
@@ -12,40 +12,70 @@ class Class_name implements Interface_class_name {
    ...
 }
 ```
-จะเห็นว่า ไม่ต้องเติมคำว่า interface หน้าชื่อคลาสแม่แบบที่ต้องการให้implement  
- ในภาษา Dart จะมองว่าทุกๆ class เป็น interface สามารถนำไปใช้งานได้ โดยไม่ต้องใช้ interface keyword
+จะเห็นว่า ไม่ต้องใช้ interface keyword หน้าชื่อคลาสแม่แบบที่ต้องการให้implement  
+ ในภาษา Dart จะมองว่าทุกๆ class เป็น interface สามารถนำไปใช้งานได้เลย 
 # Syntax ของ java 
 ```java
 interface Animal {
-  public void animalSound(); 
+
   public void sleep(); 
 }
+class Print implements Animal{
+  public void sleep(){
+System.out.println("หลับ");
+   }
+}
+
 ```
 # ตัวอย่างการใช้ Interface ในภาษา Dart
 ```dart
 class Zoo {
-  void Animal() {
+  void animal() {
     print("มีช้าง มีแมว");
   }
 }
  
-// class Khao_kheow_zoo implementing class Zoo
-class Khao_kheow_zoo implements Zoo {
+// class Panda implementing class Zoo
+class Panda implements Zoo {
 
-  void Animal() {
-    print("สวนสัตว์เขาเขียวมี สิงโต ม้าลาย อย่างล่ะตัว");
+  void animal() {
+    print("สวนสัตว์มี แพนด้า 2 ตัว");
   }
 }
  
 void main() {
-  // creating instance of Class khao_kheow_zoo
-  var khao_kheow_zoo = Khao_kheow_zoo();
-  khao_kheow_zoo.Animal();
+  // creating instance of Class Panda
+  var panda = Panda();
+ panda.animal();
 }
 ```
 Output
 ```
-สวนสัตว์เขาเขียวมี สิงโต ม้าลาย อย่างล่ะตัว
+สวนสัตว์มี แพนด้า 2 ตัว
+```
+# เปรียบเทียบกับภาษา Java 
+```java
+interface Zoo {
+   public void Animal(); 
+      }
+
+// class Panda implementing class Zoo
+public class Panda implements Zoo {
+
+  public void Animal() {
+        System.out.println("สวนสัตว์มี แพนด้า 2 ตัว ");
+    }
+
+    public static void main(String[] args) {
+        // สร้างอินสแตนซ์ของคลาส Khao_kheow_zoo
+        Panda panda = new Panda();
+        panda.Animal();
+    }
+}
+```
+Output
+```
+สวนสัตว์มี แพนด้า 2 ตัว
 ```
 # ตัวอย่างการใช้ Interface ในภาษา Java 
 ```java
@@ -87,49 +117,77 @@ Output
 
 # ตัวอย่างการใช้ Implementing Multiple Interfaces Dart
 ```dart
-void main() { 
-   Calculator c = new Calculator(); 
-   print("The gross total : ${c.ret_tot()}"); 
-   print("Discount :${c.ret_dis()}"); 
-}  
-class Calculate_Total { 
-   int ret_tot() {} 
-}  
-class Calculate_Discount { 
-   int ret_dis() {} 
-}                                     //ใช้ " , " ในการใช้ implements หลาย class
-class Calculator  implements Calculate_Total,Calculate_Discount { 
-   int ret_tot() { 
-      return 1000; 
-   } 
-   int ret_dis() { 
-      return 50; 
-   } 
+
+void main() {
+   Bank c = Bank();
+   print("coinSilver : ${c.coinSilver()}");
+   print("coinGold : ${c.coinGold()}");
 }
+
+ abstract class Silver {
+   int coinSilver();
+}
+
+ abstract class Gold  {
+   int coinGold();
+}
+
+class Bank implements Silver, Gold {
+   int coinSilver() {
+      return 1000;
+   }
+   int coinGold() {
+      return 50;
+   }
+}
+
+
 ```
 Output
 ```
-The gross total: 1000 
-Discount:50 
+coinSilver: 1000 
+coinGold:50 
 ```
 # สิ่งที่ต้องระวัง
-แม้ว่าการใช้งานหลายอินเทอร์เฟซจะมีประสิทธิภาพ แต่มาพร้อมกับความท้าทาย:<br>
+1.การนิยามเมทอด: เมทอดในอินเทอร์เฟซจะถูกนิยามเป็น abstract และต้องถูกนิยามใหม่ในคลาสที่ Implement อินเทอร์เฟซนั้น ถ้าคุณละเมทอดหรือทำผิดพลาดในการระบุเมทอดจากอินเทอร์เฟซ จะทำให้เกิดข้อผิดพลาด.<br>
 
-ความซับซ้อน : ยิ่งคลาสใช้อินเทอร์เฟซมากเท่าใด คลาสก็จะยิ่งซับซ้อนมากขึ้นเท่านั้น จำเป็นอย่างยิ่งที่จะต้องรักษาสมดุลเพื่อหลีกเลี่ยงการเขียนCodeที่ซับซ้อนเกินไป<br>
-วิธีการทับซ้อนกัน : หากสองอินเทอร์เฟซมีวิธีการที่มีชื่อเดียวกัน แต่มีฟังก์ชันการทำงานที่แตกต่างกัน อาจนำไปสู่ความสับสนได้<br>
+2.การสร้างอินสแตนซ์: อินสแตนซ์ของคลาสที่ Implement อินเทอร์เฟซจะต้องนำเอาทุกเมทอดในอินเทอร์เฟซมานิยามใหม่ ไม่ว่าจะมีการใช้งานเมทอดนั้นหรือไม่.<br>
+
+3.การอัปเดต: หากคุณเพิ่มเมทอดใหม่ในอินเทอร์เฟซที่มีคลาส Implement แล้ว คุณจะต้องอัปเดตทุกคลาสที่ Implement อินเทอร์เฟซนั้น เพื่อนิยามเมทอดใหม่ด้วย.<br>
+
+4.สองคลาสอาจมีเมทอดชื่อเดียว: ถ้าคุณมีคลาสที่ Implement หลายอินเทอร์เฟซ และอินเทอร์เฟซเหล่านี้มีเมทอดที่มีชื่อเดียวกัน คุณจะต้องสร้างการนิยามของเมทอดที่ชื่อซ้ำนี้ในคลาสที่ Implement และระบุการทำงานที่ถูกต้องในแต่ละเมทอด.<br>
+
+
+
+
+
 # สรุปการใช้ Interface in Dart
-1.ใช้เพื่อสืบทอดmethod ของคลาสแม่แบบ
+1การประกาศ Interface:<br>
 
-2.คลาสสามารถขยายได้เพียงคลาสเดียว แต่สามารถนำไปใช้ได้มากเท่าทีเราต้องการ
+   -ใช้ abstract class เพื่อประกาศ Interface.<br>
 
-3.Dart ไม่มีวิธีการโดยตรงในการประกาศอินเทอร์เฟซ ดังนั้นการประกาศคลาสจึงถือเป็นการประกาศบนอินเทอร์เฟซ
+   -นิยามเมทอดใน Interface แบบ abstract โดยไม่ระบุรายละเอียดการทำงาน.<br>
 
-4.คลาสย่อยจะต้องแทนที่ฟิลด์ของอินเทอร์เฟซ
+2การ Implement Interface:<br>
 
-5.เราสามารถใช้อินเทอร์เฟซหนึ่งหรือหลายอินเทอร์เฟซพร้อมกันได้
+   -ใช้คีย์เวิร์ด implements เมื่อประกาศคลาสที่จะ Implement Interface.<br>
+
+3การใช้งานหลาย Interface:<br>
+
+   -คลาสสามารถ Implement หลาย Interface พร้อมกัน โดยใช้ , เพื่อคั่นระหว่างชื่อ Interface.<br>
+
+4การเปลี่ยนแปลง Interface:<br>
+
+   -หากมีการเปลี่ยนแปลงใน Interface โดยการเพิ่มหรือลบเมทอด คุณต้องปรับปรุงทุกคลาสที่ Implement Interface นั้น.<br>
+
+
 # Reference
 https://dart-tutorial.com/object-oriented-programming/interface-in-dart/<br>
 https://www.geeksforgeeks.org/interface-in-dart/<br>
 https://www.educative.io/answers/what-is-an-interface-in-dart/<br>
 https://www.darttutorial.org/dart-tutorial/dart-interface/<br>
 https://www.javatpoint.com/dart-interfaces<br>
+
+# Slide & Video
+https://docs.google.com/presentation/d/1oADlS_xcE9EhjZayu_g-1ViwulF1Dc2WgGdxgK8i7ck/edit?usp=sharing<br>
+https://youtu.be/bX7q5cZDatQ?feature=shared<br>

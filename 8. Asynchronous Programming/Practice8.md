@@ -131,22 +131,21 @@ import 'dart:async';
 Future<String> fetchData(String id) {
   return Future.delayed(Duration(seconds: 2), () => 'Data for ID $id');
 }
-void main() {
-  final List<Future<String>> futures = [];
-  for (int i = 1; i <= 5; i++) {
+void main() async {
+  final futures = <Future<String>>[];
+  for (var i = 1; i <= 5; i++) {
     final future = fetchData(i.toString());
     futures.add(future);
   }
-  Future.wait(futures)
-      .then((List<String> results) {
-        print('All operations completed:');
-        for (int i = 0; i < results.length; i++) {
-          print('Result for operation ${i + 1}: ${results[i]}');
-        }
-      })
-      .catchError((error) {
-        print('An error occurred: $error');
-      });
+  try {
+    final results = await Future.wait(futures);
+    print('All operations completed:');
+    results.asMap().forEach((index, value) {
+      print('Result for operation ${index + 1}: $value');
+    });
+  } catch (error) {
+    print('An error occurred: $error');
+  }
 }
 ~~~
 - Python
@@ -276,81 +275,50 @@ Enter : 1 และ Enter : 2
 ## 8.เขียนโปรแกรมDartที่จะรับStringเป็นInputเรียงลำดับรายการแบบ asynchronous จากนั้นพิมพ์รายการที่เรียงลำดับแล้ว
 - Dart
 ~~~ dart
+import 'dart:async';
 import 'dart:io';
 Future<void> main() async {
-  try {
-    String input = stdin.readLineSync()!;
-    List<String> items = input.split(' ');
-    items.sort(); // เรียงลำดับรายการ
-    for (String item in items) {
-      print(item);
-    }
-  } catch (error) {
-    print('Error : $error');
-  }
+  final inputList = await getInputListAsync();
+  final sortedList = await sortListAsync(inputList);
+  print('list: $sortedList');
 }
-~~~
-- Java
-~~~ java
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.concurrent.CompletableFuture;
-
-public class Main {
-    public static CompletableFuture<String> readLineAsync(Scanner scanner) {
-        CompletableFuture<String> future = new CompletableFuture<>();
-        new Thread(() -> {
-            String input = scanner.nextLine();
-            future.complete(input);
-        }).start();
-        return future;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        CompletableFuture<String> inputFuture = readLineAsync(scanner);
-        inputFuture.thenAccept(input -> {
-            String[] items = input.split(" ");
-            Arrays.sort(items);
-            for (String item : items) {
-                System.out.println(item);
-            }
-        });
-        try {
-            // รอให้การอ่านข้อมูลเสร็จสิ้น
-            inputFuture.get();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        scanner.close();
-    }
+Future<List<String>> getInputListAsync() async {
+  final inputList = <String>[];
+  await for (final line in stdin.transform(utf8.decoder).transform(LineSplitter())) {
+    if (line.isEmpty) break;
+    inputList.add(line);
+  }
+  return inputList;
+}
+Future<List<String>> sortListAsync(List<String> list) async {
+  final sortedList = List<String>.from(list)..sort();
+  return sortedList;
 }
 ~~~
 - Python
 ~~~ python
 import asyncio
-async def read_line_async():
-    loop = asyncio.get_event_loop()
-    return await loop.run_in_executor(None, input, "Enter a list of words separated by space: ")
 async def main():
-    try:
-        input_str = await read_line_async()
-        items = input_str.split()
-        items.sort()
-        for item in items:
-            print(item)
-    except Exception as e:
-        print(f'Error: {e}')
+    input_list = await get_input_list()
+    sorted_list = await sort_list_async(input_list)
+    print(f'list: {sorted_list}')
+async def get_input_list():
+    input_list = []
+    while True:
+        line = input()
+        if not line:
+            break
+        input_list.append(line)
+    return input_list
+async def sort_list_async(input_list):
+    return sorted(input_list)
 if __name__ == '__main__':
     asyncio.run(main())
 ~~~
 - Input "Bat Ant Cat"
 <details>
   <summary><strong>Output</strong></summary>
-  <pre><code>
-    Ant
-    Bat
-    Cat
+  <pre><code>list: Ant Bat Cat
 </code></pre>
 </details>
 
@@ -358,102 +326,61 @@ if __name__ == '__main__':
 - Dart
 ~~~ dart
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
-void main() {
-  print('Enter a list of integers separated by spaces:');
-  String input = stdin.readLineSync()!;
-  List<int> inputList = input.split(' ').map((e) => int.parse(e)).toList();
-  multiplyAndPrint(inputList);
-}
-Future<void> multiplyAndPrint(List<int> numbers) async {
-  List<Future<int>> futures = [];
-  for (int number in numbers) {
-    Future<int> future = multiplyAsync(number);
-    futures.add(future);
+Future<void> main() async {
+  final numbers = <int>[];
+  int input;
+  while (true) {
+    stdout.write('Enter an integer (Enter -1 to finish): ');
+    input = int.tryParse(stdin.readLineSync());
+    if (input == -1) break;
+    numbers.add(input);
   }
-  List<int> modifiedList = await Future.wait(futures);
-  print('$modifiedList');
-}
-Future<int> multiplyAsync(int number) async {
-  await Future.delayed(Duration(seconds: 2));
-  return number * 2;
-}
-~~~
-- Java
-~~~ java
-import java.util.Scanner;
-import java.util.concurrent.CompletableFuture;
-public class Main {
-    public static CompletableFuture<String> readLineAsync(Scanner scanner) {
-        CompletableFuture<String> future = new CompletableFuture<>();
-        new Thread(() -> {
-            String input = scanner.nextLine();
-            future.complete(input);
-        }).start();
-        return future;
-    }
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a list of integers separated by spaces: ");
-        CompletableFuture<String> inputFuture = readLineAsync(scanner);
-        inputFuture.thenAcceptAsync(input -> {
-            String[] inputArray = input.split(" ");
-            int[] numbers = new int[inputArray.length];
-            for (int i = 0; i < inputArray.length; i++) {
-                numbers[i] = Integer.parseInt(inputArray[i]);
-            }
-            multiplyAndPrint(numbers);
-        });
-        try {
-            // รอให้การอ่านข้อมูลเสร็จสิ้น
-            inputFuture.get();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        scanner.close();
-    }
-    public static void multiplyAndPrint(int[] numbers) {
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] *= 2;
-        }
-        System.out.print("[");
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.print(numbers[i]);
-            if (i < numbers.length - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println("]");
-    }
+  Future<int> multiplyByTwo(int number) async {
+    await Future.delayed(Duration(seconds: 1));
+    return number * 2;
+  }
+  final results = await Future.wait(numbers.map((number) async {
+    final result = await multiplyByTwo(number);
+    return result;
+  }));
+  print('Modified list: $results');
 }
 ~~~
 - Python
 ~~~ python
 import asyncio
-async def read_line_async():
-    loop = asyncio.get_event_loop()
-    return await loop.run_in_executor(None, input)
 async def main():
-    try:
-        input_str = await read_line_async()
-        input_list = list(map(int, input_str.split()))
-        await multiply_and_print(input_list)
-    except Exception as e:
-        print(f'Error: {e}')
-async def multiply_and_print(numbers):
-    await asyncio.gather(*[multiply_async(number) for number in numbers])
-async def multiply_async(number):
-    await asyncio.sleep(2)  # รอ 2 วินาที
-    result = number * 2
-    print(result, end=', ')
-if __name__ == '__main__':
+    numbers = []
+    while True:
+        try:
+            input_str = input('Enter an integer (Enter -1 to finish): ')
+            input_num = int(input_str)
+            if input_num == -1:
+                break
+            numbers.append(input_num)
+        except ValueError:
+            print('Pls int')
+    async def multiply_by_two(number):
+        await asyncio.sleep(1)
+        return number * 2
+    tasks = [multiply_by_two(number) for number in numbers]
+    results = await asyncio.gather(*tasks)
+    print(f'Modified list: {results}')
+if __name__ == "__main__":
     asyncio.run(main())
+
 ~~~
-- Input 1 2 3 4 5
+- Input 1 2 3 4 5 -1
 <details>
   <summary><strong>Output</strong></summary>
-  <pre><code>[2,4,6,8,10]
+  <pre><code>Enter an integer (Enter -1 to finish): 1
+Enter an integer (Enter -1 to finish): 2
+Enter an integer (Enter -1 to finish): 3
+Enter an integer (Enter -1 to finish): 4
+Enter an integer (Enter -1 to finish): 5
+Modified list: [2, 4, 6, 8, 10]
+
 </code></pre>
 </details>
 
@@ -497,6 +424,15 @@ if __name__ == '__main__':
   <pre><code>"nrokapliS"
 </code></pre>
 </details>
+
+# Link Video
+- [https://youtu.be/rEW9-OnsbaY](https://drive.google.com/file/d/1VI1bvelyO9BvAKKnSahD8_6aFS7i3rC7/view?usp=sharing)
+
+# Slide
+- [Practice 8.pptx](https://github.com/soonklang/dart-tutorial/files/12769061/Practice.8.pptx)
+# Slide2
+- [Practice 8.pdf](https://github.com/soonklang/dart-tutorial/files/12889154/Practice.8.pdf)
+
 
 # Reference
 - https://dart.dev/codelabs/async-await

@@ -162,3 +162,9 @@ print("The Length of Types is $length");
    - https://www.w3schools.com/c/c_data_types.php
    - https://www.digitalocean.com/community/tutorials/python-data-types
    - https://dart-tutorial.com/introduction-and-basics/datatypes-in-dart/
+
+## file การนำเสนอ
+  - [Datatypes in Dart(1-4).pdf](https://github.com/soonklang/dart-tutorial/files/12752008/Datatypes.in.Dart.1-4.pdf)
+
+## Link Video
+   - https://www.youtube.com/watch?v=fxsf0Uqh1bU

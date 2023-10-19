@@ -418,4 +418,17 @@ void main() {
 * Aditya Taparia , GeeksforGeeks. "Dart Loops." [https://www.geeksforgeeks.org/dart-loops/](https://www.geeksforgeeks.org/dart-loops/).
 * Eric Windmill , Flutter by Example. "Loops: for and while." [https://flutterbyexample.com/lesson/loops-for-and-while](https://flutterbyexample.com/lesson/loops-for-and-while).
 * Dart Tutorials. "Loops." [https://dart.dev/language/loops](https://dart.dev/language/loops)
-  
+
+
+# Slides & Clip
+  [<img src="https://i.ytimg.com/vi/67DbhBAfJFU/maxresdefault.jpg" width="50%">](https://youtu.be/67DbhBAfJFU
+ "Now in Android: 55")
+
+link vdo : https://youtu.be/67DbhBAfJFU
+
+pdf file : [FOR LOOP IN DART.pdf](https://github.com/620710820/photo/files/12770033/FOR.LOOP.IN.DART.-.620710820.pdf)
+
+pdf file ver02 : [FOR LOOP IN DART.pdf](https://github.com/620710820/photo/files/12883667/FOR.LOOP.IN.DART.-.620710820.pdf)
+
+
+Slides : [FOR LOOP IN DART](https://drive.google.com/file/d/1vZReXkCPW9JMhWV1PuW0ybU1ly6CGKYg/view?usp=sharing)

@@ -28,7 +28,7 @@ class Person{
 ```
 
 ## ตัวอย่างที่ 6 : Constructor แบบมี Optional Parameters
-- Optional Parameters คือ Parameters ที่เราจะสามารถส่งหรือไม่ส่งค่ามาก็ได้ Constructor ก็ยังสามารถทำงานได้ตามปกติ ถ้าไม่ได้กำหนดค่า  Defalut จะมีค่าเป็น NULL
+- Optional Parameters คือ Parameters ที่เราจะสามารถส่งหรือไม่ส่งค่ามาก็ได้ Constructor ก็ยังสามารถทำงานได้ตามปกติ ถ้าไม่ได้กำหนดค่า  default จะมีค่าเป็น NULL
 - ในตัวอย่างด้านล่าง เราได้ทำการสร้าง Class Person มี Property คือ **name**,**lastName** เเละ **age** จากนั้นสร้าง Constructor เพื่อ initialize ค่าของ Property ทุกตัว เเต่สำหรับ **age** เเละ **lastName** เราจะรับค่าแบบ Optional Parameters 
 
  ```dart
@@ -38,7 +38,7 @@ class Person {
   int? age;
   
   // Constructor
-  Person(this.name, [this.lastName, this.age=0]);
+  Person([this.name, this.lastName, this.age]);
 
   // Method
   void display() {
@@ -60,7 +60,7 @@ Last Name: Carter
 Age: 0
 ```
 ### ตัวอย่าง Optional Parameters ในภาษา Java
-> หมายเหตุ ภาษา Java นั้นไม่มี Optional Parameters เป็นการประยุกต์ใช้จาก Parameters แบบปกติ
+> หมายเหตุ ภาษา Java นั้นไม่มี Optional Parameters เป็นการประยุกต์ใช้จากวิธี Constructor Overloading
 ```java
 class Person{
   String name;
@@ -100,18 +100,17 @@ Name: David
 Last Name: Carter
 Age: 0
 ```
-## ตัวอย่างที่ 7 : Constructor แบบมีการตั้งชื่อ Parameters (Named Parameters)
-* การตั้งชื่อ Parameters ทำให้สามารถส่งค่าได้ผ่านชื่อของ Parameters โดยไม่ต้องคำนึงถึงลำดับของ Parameters ที่เขียนไว้ใน Constroctor ก็ได้
+## ตัวอย่างที่ 7 :  Parameters ที่มีชื่อ (Named Parameters)
+* Parameters ที่มีชื่อทำให้สามารถส่งค่าโดยการเรียกชื่อของ Parameters โดยไม่ต้องคำนึงถึงลำดับของ Parameters ที่เขียนไว้ใน Constroctor ก็ได้
 * ตัวอย่างด้านล่างเราได้สร้าง Class ShowMyDetails มี Property คือ **name**,**lastName** เเละ **age**
  สำหรับ **lastName** เเละ **age** จะถูกกำหนดเป็น Parameters ที่มีชื่อโดยครอบด้วยเครื่องหมาย {} (ปีกกา)
-**Syntax**
 ```dart
 class ShowMyDetails{
   String? name;
   String? lastName;
   int? age;
 
-  ShowMyDetails(this.name,{this.lastName,this.age=0});
+  ShowMyDetails({this.name,this.lastName,this.age});
 
   void display(){
     print("Name: ${this.name}");
@@ -121,7 +120,7 @@ class ShowMyDetails{
 }
 
 void main(){
-    ShowMyDetails smd = ShowMyDetails("Jay", age: 24 ,lastName: "Tillu",);
+    ShowMyDetails smd = ShowMyDetails(name: "Jay", age: 24 ,lastName: "Tillu",);
     smd.display();
   }
 ```
@@ -203,3 +202,10 @@ Educative
 - https://dart-tutorial.com
 - https://dart.dev
 - https://www.educative.io
+
+## วิดีโอนำเสนอ
+- [Google Drive](https://drive.google.com/file/d/1SGjWTSb65Rp_0Dy2itYXcIJk0b5c2GLj/view?usp=drive_link)
+- [Youtube](https://www.youtube.com/watch?v=GpzJq3lpHew)
+## สไลด์นำเสนอ
+- [Constructor in Dart Part2.pptx](https://github.com/soonklang/dart-tutorial/raw/main/6.%20OOP%20In%20Dart/Constructor%20in%20Dart%20Part2.pptx)
+- [Constructor in Dart Part2.pdf](https://github.com/soonklang/dart-tutorial/blob/main/6.%20OOP%20In%20Dart/Constructor%20in%20Dart%20Part2.pdf)

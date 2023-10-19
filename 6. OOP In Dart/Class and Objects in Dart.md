@@ -1,4 +1,3 @@
-
 # Class and Objects in Dart
 
 
@@ -13,37 +12,42 @@ Object คือตัวอย่างของ Class คุณสามาร
 
 # ตัวอย่าง Class และ Object ในภาษา Dart
 ตัวอย่างข้างล่างนี้จะมี Class Animal มี properties 3 อย่าง คือ
-name(ชื่อ) , numberOfLegs(จำนวนขา) และ lifeSpan(อายุไข) และ Class จะมี method ชื่อ display
-ซึ่งจะพิมพ์ค่า properties ทั้ง 3 อย่างออกมา
+weight(น้ำหนัก) , height(ส่วนสูง) และ calbmi(ค่า bmi) และ Class จะมี method ชื่อ calculatorbmi
+ซึ่งจะพิมพ์ว่าค่า bmi อยู่ในเกณฑ์ไหน
 
 ```dart
-class Animal {
-  String? name;
-  int? numberOfLegs;
-  int? lifeSpan;
+class Bmi{
+  double? weight;
+  double? height;
+  double? calbmi;
 
-  void display() {
-    print("Animal name: $name.");
-    print("Number of Legs: $numberOfLegs.");
-    print("Life Span: $lifeSpan.");
+  void calculatorbmi(){
+     calbmi = weight!/(height!/100 * height!/100);
+    if(calbmi! > 30){
+     print("น้ำหนักอยู่ในเกณฑ์ อ้วนมาก"); 
+    }else if(calbmi! >= 25){
+      print("น้ำหนักอยู่ในเกณฑ์ อ้วน"); 
+    }else if(calbmi! >=18.6){
+      print("น้ำหนักอยู่ในเกณฑ์ สมส่วน");
+    }else{
+      print("น้ำหนักอยู่ในเกณฑ์ ผอมเกินไป");
+    }
   }
 }
 
-void main(){
-  // Here animal is object of class Animal. 
-  Animal animal = Animal();
-  animal.name = "Lion";
-  animal.numberOfLegs = 4;
-  animal.lifeSpan = 10;
-  animal.display();
+void main() {
+  Bmi bmi = Bmi(); 
+  bmi.weight = 80;
+  bmi.height = 180;
+  bmi.calculatorbmi();
 }
+
+
 ```
 
 <details>
   <summary><strong>Output</strong></summary>
-  <pre><code>Animal name: Lion.
-Number of Legs: 4.
-Life Span: 10.</code></pre>
+  <pre><code>น้ำหนักอยู่ในเกณฑ์ สมส่วน</code></pre>
 </details>
 
 # ตัวอย่าง 2: หาพื้นที่สี่เหลี่ยมผืนผ้าโดยใช้ Class และ Objects
@@ -115,97 +119,84 @@ void main(){
 </details>
 
 
-# ตัวอย่างของ Class กับ Object ในภาษา Python และ Java โดยจะใช้ชื่อ Class ว่า Dog
+# ตัวอย่างของ Class กับ Object ในภาษา Python และ Java โดยจะใช้ชื่อ Class ว่า Bmi
 
 # Python
 ```python
-# Python3 program to
-# demonstrate instantiating
-# a class
-class Dog:
- 
-    # A simple class
-    # attribute
-    attr1 = "mammal"
-    attr2 = "dog"
- 
-    # A sample method
-    def fun(self):
-        print("I'm a", self.attr1)
-        print("I'm a", self.attr2)
- 
- 
-# Driver code
-# Object instantiation
-Rodger = Dog()
- 
-# Accessing class attributes
-# and method through objects
-print(Rodger.attr1)
-Rodger.fun()
+class Bmi:
+  def __init__(self):
+    self.calbmi = 0
+    self.weight = 0
+    self.height = 0
+
+  def calculatorbmi(self):
+    self.calbmi = self.weight/(self.height/100 * self.height/100)
+    if self.calbmi > 30:
+     print("น้ำหนักอยู่ในเกณฑ์ อ้วนมาก")
+    elif self.calbmi >= 25:
+      print("น้ำหนักอยู่ในเกณฑ์ อ้วน")
+    elif self.calbmi >=18.6:
+      print("น้ำหนักอยู่ในเกณฑ์ สมส่วน")
+    else:
+      print("น้ำหนักอยู่ในเกณฑ์ ผอมเกินไป")
+
+
+
+bmi = Bmi()
+bmi.weight = 80
+bmi.height = 180
+bmi.calculatorbmi()
 ```
 <details>
   <summary><strong>Output</strong></summary>
-  <pre><code>mammal.
-     I'm a mammal
-     I'm a dog </code></pre>
+  <pre><code>
+     น้ำหนักอยู่ในเกณฑ์ สมส่วน </code></pre>
 </details>
 
 # Java
 ```java
-/ Class Declaration
- 
-public class Dog {
-    // Instance Variables
-    String name;
-    String breed;
-    int age;
-    String color;
- 
-    // Constructor Declaration of Class
-    public Dog(String name, String breed, int age,
-               String color)
-    {
-        this.name = name;
-        this.breed = breed;
-        this.age = age;
-        this.color = color;
-    }
- 
-    // method 1
-    public String getName() { return name; }
- 
-    // method 2
-    public String getBreed() { return breed; }
- 
-    // method 3
-    public int getAge() { return age; }
- 
-    // method 4
-    public String getColor() { return color; }
- 
-    @Override public String toString()
-    {
-        return ("Hi my name is " + this.getName()
-                + ".\nMy breed,age and color are "
-                + this.getBreed() + "," + this.getAge()
-                + "," + this.getColor());
-    }
- 
-    public static void main(String[] args)
-    {
-        Dog tuffy
-            = new Dog("tuffy", "papillon", 5, "white");
-        System.out.println(tuffy.toString());
+class BMI {
+        double weight;
+        double height;
+        double calbmi;
+        void calculatorbmi(){
+            calbmi = weight/((height/100) * (height/100));
+            if(calbmi > 30){
+                System.out.println("น้ำหนักอยู่ในเกณฑ์ อ้วนมาก");
+            }else if(calbmi >= 25){
+                System.out.println("น้ำหนักอยู่ในเกณฑ์ อ้วน");
+            }else if(calbmi >= 18.6){
+                System.out.println("น้ำหนักอยู่ในเกณฑ์ สมส่วน");
+            }else{
+                System.out.println("น้ำหนักอยู่ใน้เกณฑ์ ผอมเกินไป");    
+                }
+        }
+}
+class Main{
+    public static void main(String[] args){
+        BMI bmi = new BMI();
+        bmi.weight = 80;
+        bmi.height = 180;
+        bmi.calculatorbmi();
     }
 }
+
 ```
 <details>
   <summary><strong>Output</strong></summary>
-  <pre><code>Hi my name is tuffy.
-My breed,age and color are papillon,5,white </code></pre>
+  <pre><code>น้ำหนักอยู่ในเกณฑ์ สมส่วน </code></pre>
 </details>
 
 # Reference
 https://dart-tutorial.com/object-oriented-programming/class-and-objects-in-dart/<br>
 https://www.geeksforgeeks.org/<br>
+
+# Video
+[Video](https://www.youtube.com/watch?v=7nq2mcbd6xc)
+
+# Slide
+[Slide.pptx](https://github.com/soonklang/dart-tutorial/files/12889140/Slide.pptx)<br>
+
+[SCSU-Slide-6.pdf](https://github.com/soonklang/dart-tutorial/files/12888573/SCSU-Slide-6.pdf)<br>
+
+

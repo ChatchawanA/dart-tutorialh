@@ -83,44 +83,51 @@ int main() {
 
 ### Java
 ```java
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("First Operation");
-        
-        Thread thread = new Thread(() -> {
+
+        CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(3000); // Simulate a 3-second delay
+                System.out.println("Second Big Operation");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("Second Big Operation");
         });
-        
-        thread.start();
-        
+
         System.out.println("Third Operation");
         System.out.println("Last Operation");
+
+        try {
+            future.get(); // Wait for the asynchronous task to complete
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 }
 ```
 
 ### Python
 ```python
-import threading
-import time
+import asyncio
 
-def delayed_print():
-    time.sleep(3)
-    print("Second Big Operation")
+async def delayed_operation():
+    await asyncio.sleep(3) # Simulate a 3-second delay
+    print('Second Big Operation')
 
-print("First Operation")
+async def main():
+    print("First Operation")
+    
+    asyncio.create_task(delayed_operation())
+    
+    print("Third Operation")
+    print("Last Operation")
 
-thread = threading.Thread(target=delayed_print)
-thread.start()
-
-print("Third Operation")
-print("Last Operation")
-
+asyncio.run(main())
 ```
 
 ## ทำไมเราต้องใช้การเขียนโปรแกรมแบบ Asynchronous
@@ -149,3 +156,13 @@ print("Last Operation")
 [Asynchronous Programming :: Dart Tutorial - Learn Dart Programming (dart-tutorial.com)](https://dart-tutorial.com/asynchronous-programming/asynchronous-programming-in-dart/)
 
 [การใช้งาน Asynchronous Programming ในภาษา Dart เบื้องต้น เนื คอร์สเรียน เรียนฟรี ออนไลน์ บทความ (ninenik.com)](https://www.ninenik.com/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99_Asynchronous_Programming_%E0%B9%83%E0%B8%99%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2_Dart_%E0%B9%80%E0%B8%9A%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B9%89%E0%B8%99-949.html)
+
+https://www.tamemo.com/post/178/async-in-dart-1-isolates-event-loop/
+
+## **Video**
+https://www.youtube.com/watch?v=WmbAFt2j2eA
+
+## **Slide**
+Old [Asynchronous-Programming-In-Dart](https://github.com/behappyxD/198198/blob/main/Asynchronous-Programming-In-Dart%20Old.pdf)
+
+New [Asynchronous-Programming-In-Dart](https://github.com/behappyxD/198198/blob/main/Asynchronous-Programming-In-Dart%20New.pdf)

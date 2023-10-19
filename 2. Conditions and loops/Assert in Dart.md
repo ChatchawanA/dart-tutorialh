@@ -1,4 +1,4 @@
-# Assert in Dart
+[Assert_in_Dart.pptx](https://github.com/soonklang/dart-tutorial/files/12880887/Assert_in_Dart.pptx)# Assert in Dart
 ## Assert
 ใน Dart "assert" เป็นคำสั่งที่ถูกใช้เพื่อทดสอบเงื่อนไขขณะที่โปรแกรมกำลังทำงานและเป็นส่วนหนึ่งของการพัฒนา (development mode) เท่านั้น ถ้าเงื่อนไขที่ระบุใน "assert" เป็นเท็จ (false) โปรแกรมจะหยุดทำงานและแสดงข้อความข้อผิดพลาด
 ## How to Run File in Assert Mode
@@ -37,14 +37,14 @@ void main(){
 
 <details open>
   <summary><strong>Output1</strong></summary>
-  <pre><code>Uncaught Error: Assertion failed: "x should be greater then y"</code></pre>
+  <pre><code>Uncaught Error: Assertion failed: "x should be greater than y"</code></pre>
 </details>
 
 ```dart
 void main(){
   int x = 20;
   int y = 10;
-  assert(x > y, "x should be greater then y");
+  assert(x > y, "x should be greater than y");
  print("Program continues after than assert");
 }
 ```
@@ -87,12 +87,11 @@ assert(urlString.startsWith('https'));
 ```c
 #include<stdio.h>
 #include<assert.h>
-int main(){
+void main(){
     int x = 20;
     int y = 10;
     assert(x > y);
     printf("Program continues after than assert\n");
-    return 0;
 }
 ```
 
@@ -176,7 +175,15 @@ print("Program continues after than assert")
 
 >การเปิดโหมดใช้งานโดย: java -ea หรือ java -enableassertions
 
-### *< Reference >*
+## *< Link Video >*
+https://youtu.be/Ebv6g1nUe5A
+
+## *< Slides >*
+[Assert in Dart.pptx](https://github.com/soonklang/dart-tutorial/files/12881415/Assert.in.Dart.pptx)
+
+[Assert in Dart.pdf](https://github.com/soonklang/dart-tutorial/files/12881291/Assert.in.Dart.pdf)
+
+## *< Reference >*
 https://dart-tutorial.com/conditions-and-loops/assert-in-dart/
 
 https://dart.dev/language/error-handling

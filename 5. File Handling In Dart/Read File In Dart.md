@@ -61,7 +61,7 @@ This is a test file.</code>
 </details>
 
 #### `ตัวอย่างที่ 3`
-  >อ่านเนื้อหาทั้งหมดจากไฟล์เป็นสตริงโดยใช้เมธอด readAsString() แบบอะซิงโครนัสและจะ return Future<String> ในฟังก์ชันcallback จะได้รับ String พร้อมเนื้อหาของไฟล์: 
+  >อ่านเนื้อหาทั้งหมดจากไฟล์เป็นสตริงโดยใช้เมธอด readAsString() แบบอะซิงโครนัสและจะ return Future< String > ในฟังก์ชันcallback จะได้รับ String พร้อมเนื้อหาของไฟล์: 
 ```dart
 import 'dart:io';
  
@@ -285,8 +285,7 @@ This is a test file.</code>
   // Open a file in read mode
   fptr = fopen("filename.txt", "r");
   ```
-
-  ฟังก์ชัน **fread()** 
+  
   #### `ตัวอย่างที่ 2`
   > mode "rb" ใช้ในเปิดการอ่านไฟล์ในโหมดไบนารี
   ```c
@@ -576,3 +575,10 @@ https://www.w3schools.com/c/c_files_read.php<br>
 https://earthly.dev/blog/csv-python/<br>
 http://marcuscode.com/lang/java/files<br>
 https://www.javatpoint.com/how-to-read-csv-file-in-java<br>
+
+## Slide
+[Read File In Dart.pdf](https://drive.google.com/file/d/1aToIgireZPNZWOCuhpNGwAi4lMeVsLiC/view?usp=sharing)<br>
+[Read File In Dart v2.pdf](https://github.com/tmwwtcrrt/slide/blob/main/Read-file-in-Dart-v2.pdf?raw=true)<br>
+
+## Video
+https://www.youtube.com/watch?v=exkBzlr8bZ4<br>

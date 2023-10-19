@@ -52,6 +52,8 @@ Output
 ## การแปลง String เป็น Datetime
 ในกรณีที่รับค่าเข้ามาเราไม่สามารถรับวัน เดือน และปีได้โดยตรง แต่ไม่สามารถดําเนินการคํานวณวันที่โดยใช้ String ได้ ดังนั้นเราต้องแปลง String เป็น DateTime ก่อน
 
+ใช้ methods `DateTime.parse()`
+
 Example
 ``` dart
 void main() {
@@ -384,3 +386,11 @@ September 01, 2023 03:14:07 PM
 [Date and time in Java](https://akexorcist.dev/datetime-api-in-java-8-cheatsheet/)<br>
 [Date and time in Python](https://www.w3schools.com/python/python_datetime.asp)<br>
 [Date and time in C](http://marcuscode.com/lang/c/date-and-time-formats)
+
+## Slide
+[Date_and_Time](https://drive.google.com/file/d/1ErxLdy1oYK4Jlbzk4Jzs7HqbdJXhHL7y/view?usp=drivesdk)
+[DateandTime.pdf](https://github.com/soonklang/dart-tutorial/files/12889458/DateandTime.pdf)
+
+
+## Video
+https://youtu.be/_TP8emNyrU8?si=Hi47ev2IP73jvfkd

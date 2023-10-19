@@ -12,8 +12,8 @@ In Dart null safety, the ? operator serves as a key component to indicate nullab
 ```dart
 void main(){
   String? text;
-  text = null; // give null
-  print(text);
+ 
+  print(text); // give null
 
   String str;
   str = null; // error
@@ -153,6 +153,21 @@ Generated Status: 0  // return null จะถูกเปลี่ยนเป�
 
 </details>
 
+## Link Video
+
+https://youtu.be/Pi0YifTRdm8
+
+## file การนำเสนอ
+
+[Practice7]
+
+[Null safety in dart.pdf](https://github.com/soonklang/dart-tutorial/files/12888861/Null.safety.in.dart.pdf)
+
+[Null safety in dart.pptx](https://github.com/soonklang/dart-tutorial/files/12888874/Null.safety.in.dart.pptx)
+
+
+
+
 ## References
 
 - https://dart.dev/codelabs/null-safety#:~:text=Null-aware%20operators,-If%20a%20variable&text=Sometimes%20the%20flow%20of%20the,this%20operator%20throws%20an%20exception.
@@ -165,7 +180,9 @@ Generated Status: 0  // return null จะถูกเปลี่ยนเป�
 
 - ChatGPT
 
+
 ```bash
+
 640710553 นาย ภานุวัฒน์ เจนภพ CS
 ```
 [try to project](https://www.educative.io/learn/home)

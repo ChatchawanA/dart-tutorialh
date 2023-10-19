@@ -76,7 +76,7 @@ void main() {
 ### Example 4: Break In Switch Case
 ```dart
 void main() {
-  var noOfMoneth = 1;
+  var noOfMonth = 1;
   switch (noOfMoneth) {
     case 1:
       print("Selected month is January.");
@@ -297,8 +297,15 @@ for i in range(0, 5):
 4</pre>
 </details>
 
+## Clips And Slide
+Vdo link : https://youtu.be/U9qI0j3olEc?si=UyryZNU85180Wwa7
+
+Download slide here : [Break and Continue in Dart](https://github.com/Natthawut630/file/raw/main/BREAK%20AND%20CONTINUE%201.pptx)
+
 ## Reference
 - https://dart-tutorial.com/conditions-and-loops/break-and-continue-in-dart/
 - https://www.w3schools.com/c/c_break_continue.php
 - https://www.w3schools.com/java/java_break.asp
 - https://www.w3schools.in/python/break-and-continue#google_vignette
+
+- 
